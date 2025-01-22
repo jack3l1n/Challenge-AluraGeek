@@ -1,0 +1,298 @@
+/* General */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Fuente general */
+    background-image: url("./Multimedia/fondo.jpg");
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+main {
+    flex: 1;
+    display: flex; /* Organiza las secciones en filas o columnas */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    justify-content: space-between; /* Espacia las secciones uniformemente */
+    align-items: flex-start; /* Alinea las secciones al principio verticalmente */
+    padding: 20px;
+    gap: 20px; /* Espaciado entre secciones */
+}
+
+/* Encabezado */
+header {
+    background-color: #7872d1; /* Morado intenso */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+
+/* Sección de productos */
+.productos {
+    flex: 3; /* Ocupa más espacio en comparación con el formulario */
+    margin-right: 20px; /* Espaciado entre las dos columnas */
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+.titulo-productos {
+    margin-left: 230px;
+    font-family: 'VT323', monospace;
+    font-size: 28px;
+    color: #ffcc00; /* Amarillo brillante */
+    margin-bottom: 30px;
+}
+
+.mensaje-vacio {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #ffcc00; /* Amarillo brillante */
+    margin-left: 200px;
+    margin-top: 155px;
+}
+
+.lista-productos {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; /* Asegura un espacio mínimo para el mensaje */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Distribución adaptable */
+    gap: 20px;
+    /*justify-items: center;*/
+}
+
+.tarjeta-producto {
+    background-color: #282828;
+    border: 2px solid #4b0082; /* Borde morado */
+    border-radius: 8px;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-producto img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.nombre-producto {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.precio-producto {
+    font-size: 18px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.boton-eliminar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-eliminar img {
+    width: 20px;
+}
+
+/* Sección de formulario */
+.formulario {
+    flex: 1; /* Ocupa menos espacio */
+    max-width: 300px; /* Ancho máximo para el formulario */
+    background-color: #7872d1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
+
+.titulo-formulario {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: #fcfbf9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.etiqueta-formulario {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.campo-formulario {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #282828;
+    color: #ffffff;
+}
+
+.boton-enviar,
+.boton-limpiar {
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover,
+.boton-limpiar:hover {
+    background-color: #ffd700; /* Amarillo más brillante al pasar el mouse */
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #7872d1;
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    font-size: 14px;
+}
+
+footer h4 {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+
+/*Resposividad*/
+
+@media screen and (max-width: 480px) {
+    /* Ajustar el layout de las secciones */
+    main {
+        padding: 10px; /* Reducir los márgenes */
+    }
+
+    /* Sección de productos */
+    .productos {
+        width: 100%; /* Asegurarse de que ocupe todo el ancho */
+        margin: 0; /* Eliminar márgenes */
+    }
+
+    .titulo-productos {
+        font-size: 20px; /* Reducir tamaño del título */
+        margin-left: 115px;
+    }
+    .lista-productos {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Columnas más pequeñas */
+        gap: 10px; /* Reducir el espacio entre productos */
+    }
+
+    /* Productos individuales */
+    .tarjeta-producto {
+        padding: 10px;
+    }
+
+    .tarjeta-producto img {
+        width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+        height: auto;
+    }
+
+    .nombre-producto {
+        font-size: 16px; /* Reducir tamaño de texto */
+    }
+
+    .precio-producto {
+        font-size: 14px; /* Reducir tamaño de texto */
+    }
+
+    /* Mensaje vacío */
+    .mensaje-vacio {
+        font-size: 14px; /* Más pequeño en pantallas pequeñas */
+        margin: 0; /* Eliminar márgenes */
+        margin-right: 80px;
+        margin-top: 100px;
+    }
+
+    /* Sección de formulario */
+    .formulario {
+        width: 100%; /* Que ocupe todo el ancho */
+        margin-top: 15px; /* Separación entre secciones */
+    }
+
+    .titulo-formulario {
+        font-size: 20px; /* Reducir tamaño del título */
+        text-align: center;
+    }
+
+    /* Campos del formulario */
+    .campo-formulario {
+        font-size: 14px; /* Reducir tamaño del texto */
+        padding: 8px; /* Reducir el espacio interno */
+    }
+
+    /* Botones del formulario */
+    .botones-formulario button {
+        font-size: 14px; /* Reducir tamaño del texto */
+        padding: 8px 12px; /* Reducir tamaño del botón */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustar el layout de las secciones */
+    main {
+        flex-direction: column; /* Apilar las secciones una sobre otra */
+        align-items: center; /* Centrar las secciones horizontalmente */
+    }
+
+    /* Sección de productos */
+    .productos {
+        flex: 1;
+        width: 100%; /* Que ocupe todo el ancho disponible */
+        margin-right: 0; /* Quitar margen lateral */
+    }
+
+    .lista-productos {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajustar columnas más pequeñas */
+        gap: 15px;
+    }
+
+    /* Sección de formulario */
+    .formulario {
+        flex: 1;
+        width: 90%; /* Reducir el ancho para dar espacio en los márgenes */
+        max-width: 500px; /* Limitar el tamaño máximo */
+        margin-top: 20px; /* Separación entre secciones */
+    }
+
+    /* Títulos */
+    .titulo-formulario {
+        font-size: 24px; /* Ajustar tamaño del texto */
+        text-align: center;
+    }
+
+    /* Mensaje vacío */
+    .mensaje-vacio {
+        font-size: 16px; /* Reducir tamaño del mensaje */
+        margin-left: 222px;
+    }
+}
+
+
+
