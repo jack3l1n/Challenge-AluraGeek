@@ -52,8 +52,6 @@ json-server --watch db.json --port 3000
 Abre el archivo index.html o accede al despliegue en Vercel.
 
 🌐 Despliegue en Vercel
-Puedes visitar el proyecto en el siguiente enlace:
-https://challenge-alura-geek-sandy.vercel.app
 
 👨‍💻 Autor
 Jackelin Latorre
